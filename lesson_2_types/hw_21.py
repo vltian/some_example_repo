@@ -6,5 +6,5 @@
 
 a = ["sdfsfdsdf", 12, 12.122, True, 1.1]
 print(type(a))
-for i in range (0, len(a)):
+for i in range (len(a)):
     print (type(a[i]))

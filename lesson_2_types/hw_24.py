@@ -5,5 +5,5 @@
 """
 a = input("Введите строку: ").split()
 for i in range (len(a)):
-    string = a[i][0:10:]
+    string = a[i][:10:]
     print (f"{i+1}. {string}")

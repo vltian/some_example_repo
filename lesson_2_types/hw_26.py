@@ -15,7 +15,7 @@
 """  Ввод исходных данных """
 spec = []
 n_spec = int(input("Введите кол-во позиций для ввода: "))
-for i in range (0, n_spec):
+for i in range (n_spec):
     Name = input("Название - ")
     Price = float(input("Цена - "))
     Qt = int(input("Кол-во - "))
@@ -28,7 +28,7 @@ print (spec)
 
 """ Выделить данные по позиции """
 pos = []
-for i in range (0, len(spec)):
+for i in range (len(spec)):
     pos.append(spec[i][1])
 
 """ Сформировать список параметров """
@@ -38,10 +38,10 @@ params = list(spec[1][1].keys())
 """ Перебор параметров/выборки списка значений по каждому """
 p = []
 param_value = []
-for j in range(0, len(params)):
+for j in range(len(params)):
     k = params[j]
     p = []
-    for m in range(0, len(pos)):
+    for m in range(len(pos)):
         p.append(pos[m].get(k))
     param_value.append(p)
 

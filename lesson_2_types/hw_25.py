@@ -11,7 +11,7 @@
 
 b = [7, 7, 7, 5, 3, 3, 2]
 a = int (input("Введите натуральное число: "))
-for i in range (0, len(b)):
+for i in range (len(b)):
     if b[i] <= a:
         if b[i] == a:
             if i == len(b) - 1:

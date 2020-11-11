@@ -14,7 +14,7 @@ b = {a1[i]: a1[i + 1] for i in range(0, len(a1), 2)}
 
 if input ("Выберите способ список - 1, словарь - 2: ") == "1":
     b = int(input("list() Введите номер месяца: "))
-    for i in range (0, len(a)):
+    for i in range (len(a)):
         if b == i + 1:
             print (a[i])
 else:

@@ -9,16 +9,7 @@ def div_2(d1, d2):
     except ZeroDivisionError:
         return "Zero division error"
 
-# a = float(input ("Введите 2 числа: \na = "))
-# b = float(input ("b = "))
-# print (f"a/b = {round(div_2 (a,b),2)}")
-
-# def div_2(d1, d2):
-#     if d2 == 0:
-#         return "Zero division error"
-#     else:
-#         return d1/d2
-# a = float(input ("Введите 2 числа: \na = "))
-# b = float(input ("b = "))
-# print (div_2 (a,b))
+a = float(input ("Введите 2 числа: \na = "))
+b = float(input ("b = "))
+print (f"a/b = {div_2(a,b)}")
 

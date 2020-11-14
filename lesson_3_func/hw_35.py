@@ -17,7 +17,7 @@ def inp():
 """ Проверка списка символов на прерывание, создание итогового списка чисел-строк для суммирования """
 def intrpt (simb_l):
     c = len(simb_l)
-    for i in range(0,len(simb_l)):
+    for i in range(len(simb_l)):
         if simb_l[i] == x:
             c = i
             break
@@ -29,7 +29,7 @@ def intrpt (simb_l):
 """ Подсчет суммы. Аргумент - список чисел-строк"""
 def summa (str):
     s = 0
-    for j in range(0, len(str)):
+    for j in range(len(str)):
         s = s + int(str[j])
     return s
 

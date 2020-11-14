@@ -10,5 +10,6 @@ def my_func(*args):
         sum_max = sum_max + max (result_list)
         result_list.pop(result_list.index(max (result_list)))
     return sum_max
-x = my_func(500, 10, 100)
+
+x = my_func(5000, 100, 10000)
 print (x)

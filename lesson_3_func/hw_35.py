@@ -27,6 +27,7 @@ def intrpt (simb_l):
     return b2
 
 """ Подсчет суммы. Аргумент - список чисел-строк"""
+
 def summa (str):
     s = 0
     for j in range(len(str)):

@@ -6,33 +6,11 @@
 """
 
 def my_func(x, y):
-    # global x
-    # for i in range(0, y):
-    # if y >= 0:
-    #     return 1
-    # else:
+    if y > 0:
+        return my_func(x, y-1) *  x
+    elif y < 0:
+        return 1 / (x*my_func(x,-y-1))
+    else:
+        return 1
 
-        x = 1 / my_func(x, (y+1))
-        return x
-
-print (my_func(10, -5))
-
-#
-#     y1 = x * 1/
-#     if y >= 0:
-#         print ("Введите отрицательное число: ")
-#     else:
-#         x = my_func(x,y) / y
-#     return x, y
-#
-# print (my_func(10,-3))
-
-# while abs (y) > 1:
-#     s = my_func(/abs(y)
-#
-#
-#     return s
-#
-# a = float (input ("Введите действительное положительное число: "))
-# b = int (input ("Введите степень - отрицательное целове число: "))
-# print (my_func(a, b))
+print (my_func(125, -4))

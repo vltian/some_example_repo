@@ -12,5 +12,6 @@ def div_2(d1, d2):
 
 a = float(input ("Введите 2 числа: \na = "))
 b = float(input ("b = "))
-print (f"a/b = {div_2(a,b)}")
+с = div_2(a,b)
+# print (f"a/b = {с}")
 

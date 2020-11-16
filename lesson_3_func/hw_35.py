@@ -46,22 +46,3 @@ while True:
         s = inp()
     else:
         break
-
-# l = []
-# for j in range(0, len(simb_x)):
-#     k = int(simb_x[j])
-#     l[j].append(k)
-# print (sum(l))
-
-#     for i in range (0, len(list_a)):
-#         if a[i] == "n":
-#             c = a[0:i:]
-#             b = c.split()
-#             return ('the end')
-#         else:
-#             c = a
-#             b = c.split()
-#     for j in range(0, len(b)):
-#         s = s + int(b[i])
-#     return (s)
-# print(inp())

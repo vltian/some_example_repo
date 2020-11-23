@@ -14,10 +14,7 @@
 """ выделить число из наличия """
 def hrs(hrs_str):
     a = hrs_str.split('(')
-    if hrs_str.count("(") > 0:
-        hr = int(a[0])
-    else:
-        hr = 0
+    hr = int(a[0]) if hrs_str.count("(") > 0 else 0
     return hr
 
 """ рассчитать суммарные часы"""

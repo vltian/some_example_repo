@@ -5,6 +5,6 @@
 with open("my_1.txt", 'r') as f_obj:
     n = 0
     for x in f_obj:
-        print(f"в строке {n} - {len(x.split(' '))} слов")
+        print(f"{len(x.split(' '))} слов - {x}", end ='')
         n += 1
-    print(f"в файле - {n} строк")
+    print('\n',f"в файле - {n} строк")

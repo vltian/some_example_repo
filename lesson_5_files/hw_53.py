@@ -2,7 +2,7 @@
 Определить, кто из сотрудников имеет оклад менее 20 тыс., вывести фамилии этих сотрудников.
 Выполнить подсчет средней величины дохода сотрудников.
 """
-with open("my_4.txt", 'r+', encoding="utf-8") as f_obj:
+with open("my_4.txt", 'w+', encoding="utf-8") as f_obj:
     """ построчный ввод фамилии и оклада, устранение пустых строк"""
     while True:
         txt_inp = input("Введите фамилию и оклад:")
@@ -14,20 +14,21 @@ with open("my_4.txt", 'r+', encoding="utf-8") as f_obj:
         else:
             break
     f_obj.seek(0)
-    """ создание словаря сотрудников с окладами"""
+    """Фамилия - оклад"""
     def inf(x_str):
         a = x_str.split()
-        inf_dict = dict(Name=a[0], Wage=int(a[1]))
-        return inf_dict
+        Name = a[0]
+        Wage = a[1]
+        return Name, Wage
     """ выбор малооплачиваемых и расчет среднего оклада """
     av_wage = 0
     len_list = 0
     for line in f_obj:
-        b = inf(line)
-        av_wage += b.get("Wage")
+        a, b = inf(line)
+        av_wage += int(b)
         len_list += 1
-        if b.get("Wage") < 20000:
-            print(b.get("Name"))
+        if int(b) < 20000:
+            print(a)
     try:
         print(av_wage/len_list)
     except ZeroDivisionError as err:

@@ -20,10 +20,10 @@ with open("firm.txt", 'r', encoding = "utf-8") as f_obj:
     n = 0
     for line in f_obj:
         a = line.split()
-        firm_dict = {f"{a[1]} {a[0]}" : int(a[2]) -  int(a[3])}
+        firm_dict = {f"{a[1]} {a[0]}": int(a[2]) - int(a[3])}
         firm_list.append(firm_dict)
         if int(a[2]) >= int(a[3]):
-            prof_sum += int(a[2]) -  int(a[3])
+            prof_sum += int(a[2]) - int(a[3])
             n += 1
     firm_list.append({"average_profit": prof_sum/n})
 with open("summary.json", 'w') as j_obj:

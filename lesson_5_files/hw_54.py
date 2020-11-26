@@ -14,7 +14,7 @@ with open("my_3.txt",  encoding = "utf-8") as f_obj:
     new_file = []
     for line in f_obj:
         a = line.split(" — ")
-        new_file.append(my_dict.get(a[0]) + " - " + a[1])
+        new_file.append(f"{my_dict.get(a[0])} - {a[1]}")
 with open("my_3_rus.txt", "w", encoding = "utf-8") as f_obj1:
     for i in range(len(new_file)):
         print(str(new_file[i]), file=f_obj1, end='')

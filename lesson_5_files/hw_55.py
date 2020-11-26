@@ -7,7 +7,7 @@ with open("numb.txt", "r+") as f_obj:
     "генерация набора чисел"
     for _ in range(10):
         x = str(random.randint(1,100))
-        f_obj.write(x + ' ')
+        f_obj.write(f"{x} ")
     f_obj.seek(0)
     "генерация набора чисел"
     num = 0

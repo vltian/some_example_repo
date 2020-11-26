@@ -14,12 +14,14 @@ with open("my_4.txt", 'w+', encoding="utf-8") as f_obj:
         else:
             break
     f_obj.seek(0)
+
+
     """Фамилия - оклад"""
     def inf(x_str):
         a = x_str.split()
-        Name = a[0]
-        Wage = a[1]
-        return Name, Wage
+        name = a[0]
+        wage = a[1]
+        return name, wage
     """ выбор малооплачиваемых и расчет среднего оклада """
     av_wage = 0
     len_list = 0

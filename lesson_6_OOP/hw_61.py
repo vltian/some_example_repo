@@ -10,9 +10,7 @@
 import time
 
 class TrafficLight:
-    color = ("r", "y", "g")
-    def __init__(self, color):
-        self.__color = color
+    __color = ("r", "y", "g")
     def running(self, t_r, t_y, t_g):
         a = {"r": t_r, "y": t_y, "g": t_g}
         while True:

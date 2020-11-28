@@ -10,17 +10,44 @@
 """
 
 class Matrix:
-    def __init__(self, matr: list):
-        self.matr = matr
+    def __init__(self, mtrx: list):
+        self.mtrx = mtrx
 
     def __str__(self):
-        for _ in self.matr:
-            return str(_)
+        global mtx_list
+        mtx = ""
+        mtx_list = []
+        z = 0
+        for i in range(len(self.mtrx)):
+            line = []
+            for j in range(len(self.mtrx[i])):
+                t = str(self.mtrx[i][j])
+                if len(t) > z:
+                    z = len(t)
+                line.append(t)
+            mtx_list.append(line)
+        for k in range (len(mtx_list)):
+            for m in range (len(mtx_list[k])):
+                l = z + 1 - len(mtx_list[k][m])
+                mtx = mtx + f"{mtx_list[k][m]}{l*' '}"
+            mtx = f"{mtx} \n"
+        return mtx
+
 
     def __add__(self, other):
-        for i in range(len(matr)):
-            for j in range(len(matr[i])):
-                return
+        ttl = []
+        for i in range(len(self.mtrx)):
+            c = []
+            for j in range(len(self.mtrx[i])):
+                c.append(self.mtrx[i][j] + other.mtrx[i][j])
+            ttl.append(c)
+        return ttl
 
-c = Matrix(([1,2,3],[2,5,6],[7,8,9]))
-print (c)
+
+f = [[1,2,3],[2,5,65],[7,88,9],[8,9,554],[2,254,7]]
+m = [[2,4,60],[8,9,500],[26,4,7],[8,922,5],[2,4,7]]
+
+d = Matrix(f)
+e = Matrix(m)
+h = Matrix(d+e)
+print (h)

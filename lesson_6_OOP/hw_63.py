@@ -15,15 +15,15 @@ class Worker:
         self.income = income
 
 class Position(Worker):
-
+    @property
     def get_full_name(self):
-        print(f"ФИО - {self.name} {self.surname}")
+        return self.name, self.surname
 
+    @property
     def get_total_income(self):
         income_tot = self.income.get("wage") + self.income.get("bonus")
-        print(f"общий доход - {income_tot}")
-
+        return income_tot
 
 pos = Position("Вася", "Петров", "Директор", {"wage": 10, "bonus": 10})
-pos.get_full_name()
-pos.get_total_income()
+print(f"ФИО - {pos.get_full_name[0]} {pos.get_full_name[1]}")
+print(f"общий доход - {pos.get_total_income}")

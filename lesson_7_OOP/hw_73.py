@@ -25,15 +25,34 @@ class Cell:
     def __add__(self, other):
         return self.qt + other.qt
 
-    def __sub__(self):
-        buf = self.qt - other.qt
-        if buf >= 0:
-            return buf
+    def __sub__(self, other):
+        if self.qt >= other.qt:
+            return self.qt - other.qt
         raise ValueError("Отрицательное значение")
 
-    def __mul__(self):
+    def __mul__(self, other):
+        return self.qt * other.qt
+
+    def __truediv__(self, other):
+        if other.qt != 0:
+            return self.qt / other.qt
+        raise ZeroDivisionError ("Деление на 0")
+
+    def make_order(self, n):
+        d = n * '*' + '\n'
+        return str(f"{(self.qt // n) * d} {(self.qt % n) * '*'}")
 
 
-    def __truediv__(self):
+cell1 = Cell(10)
+cell2 = Cell(15)
+cell3 = Cell(12)
+cell4 = Cell(0)
 
+cell5 = Cell(cell1 + cell2)
+print (cell5.make_order(3))
+# # print (cell1 - cell2)
+# print (cell2 - cell1)
+# print (cell2 * cell4)
+# print (cell3 / cell4)
 
+print(cell1.make_order(3))

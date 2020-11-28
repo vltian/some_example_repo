@@ -40,7 +40,7 @@ class Cell:
 
     def make_order(self, n):
         d = n * '*' + '\n'
-        return str(f"{(self.qt // n) * d} {(self.qt % n) * '*'}")
+        return str(f"{(self.qt // n) * d}{(self.qt % n) * '*'}")
 
 
 cell1 = Cell(10)
@@ -49,10 +49,10 @@ cell3 = Cell(12)
 cell4 = Cell(0)
 
 cell5 = Cell(cell1 + cell2)
-print (cell5.make_order(3))
+print (cell5.make_order(15))
 # # print (cell1 - cell2)
 # print (cell2 - cell1)
 # print (cell2 * cell4)
 # print (cell3 / cell4)
 
-print(cell1.make_order(3))
+print(cell1.make_order(5))

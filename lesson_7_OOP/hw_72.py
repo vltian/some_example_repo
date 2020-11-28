@@ -8,13 +8,22 @@
 абстрактные классы для основных классов проекта, проверить на практике работу декоратора @property.
 """
 from abc import ABC, abstractmethod
+from functools import reduce
+
+
+def total_fab(name, qt)
+    garm_qt = reduce(lambda x: x + self.fab_qt if name = "suit" else x + self.fab_qt1)
+    return garm_qt
+
 
 class Garment(ABC):
-    def __init__(self):
+    def __init__(self, name):
+        self.name = name
 
 
 class Suit(Garment):
-    def __init__(self, h):
+    def __init__(self, name, h):
+        super().__init__(name)
         self.h = h
 
     @property
@@ -23,7 +32,8 @@ class Suit(Garment):
 
 
 class Coat(Garment):
-    def __init__(self, v):
+    def __init__(self, name, v):
+        super().__init__(name)
         self.v = v
 
     @property

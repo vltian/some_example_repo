@@ -50,9 +50,4 @@ cell4 = Cell(0)
 
 cell5 = Cell(cell1 + cell2)
 print (cell5.make_order(15))
-# # print (cell1 - cell2)
-# print (cell2 - cell1)
-# print (cell2 * cell4)
-# print (cell3 / cell4)
-
 print(cell1.make_order(5))

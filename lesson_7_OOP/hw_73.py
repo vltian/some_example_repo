@@ -23,19 +23,19 @@ class Cell:
         self.qt = qt
 
     def __add__(self, other):
-        return self.qt + other.qt
+        return Cell(self.qt + other.qt)
 
     def __sub__(self, other):
         if self.qt >= other.qt:
-            return self.qt - other.qt
+            return Cell(self.qt - other.qt)
         raise ValueError("Отрицательное значение")
 
     def __mul__(self, other):
-        return self.qt * other.qt
+        return Cell(self.qt * other.qt)
 
     def __truediv__(self, other):
         if other.qt != 0:
-            return self.qt / other.qt
+            return Cell(self.qt / other.qt)
         raise ZeroDivisionError ("Деление на 0")
 
     def make_order(self, n):
@@ -47,7 +47,7 @@ cell1 = Cell(10)
 cell2 = Cell(15)
 cell3 = Cell(12)
 cell4 = Cell(0)
-
-cell5 = Cell(cell1 + cell2)
-print (cell5.make_order(15))
-print(cell1.make_order(5))
+print(Cell(cell1 + cell2))
+print(type(cell1 + cell2))
+print (cell3.make_order(5))
+print(cell1.make_order(6))

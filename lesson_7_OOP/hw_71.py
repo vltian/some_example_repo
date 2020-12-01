@@ -14,25 +14,10 @@ class Matrix:
         self.mtrx = mtrx
 
     def __str__(self):
-        global mtx_list
-        mtx = ""
-        mtx_list = []
-        z = 0
-        for i in range(len(self.mtrx)):
-            line = []
-            for j in range(len(self.mtrx[i])):
-                t = str(self.mtrx[i][j])
-                if len(t) > z:
-                    z = len(t)
-                line.append(t)
-            mtx_list.append(line)
-        for k in range (len(mtx_list)):
-            for m in range (len(mtx_list[k])):
-                l = z + 1 - len(mtx_list[k][m])
-                mtx = mtx + f"{mtx_list[k][m]}{l*' '}"
-            mtx = f"{mtx} \n"
-        return mtx
-
+        line = []
+        for _ in self.mtrx:
+            line.append(str(_))
+        return "\n".join(line)
 
     def __add__(self, other):
         ttl = []
@@ -51,3 +36,25 @@ d = Matrix(f)
 e = Matrix(m)
 h = Matrix(d+e)
 print (h)
+print(type(h))
+
+#
+# def __str__(self):
+#     global mtx_list
+#     mtx = ""
+#     mtx_list = []
+#     z = 0
+#     for i in range(len(self.mtrx)):
+#         line = []
+#         for j in range(len(self.mtrx[i])):
+#             t = str(self.mtrx[i][j])
+#             if len(t) > z:
+#                 z = len(t)
+#             line.append(t)
+#         mtx_list.append(line)
+#     for k in range(len(mtx_list)):
+#         for m in range(len(mtx_list[k])):
+#             l = z + 1 - len(mtx_list[k][m])
+#             mtx = mtx + f"{mtx_list[k][m]}{l * ' '}"
+#         mtx = f"{mtx} \n"
+#     return mtx

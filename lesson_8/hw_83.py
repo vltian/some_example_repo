@@ -8,28 +8,25 @@
 Класс-исключение должен не позволить пользователю ввести текст (не число) и отобразить соответствующее сообщение.
 При этом работа скрипта не должна завершаться.
 """
-class Exc_int_type:
+class Exc_int_type(Exception):
     def __init__(self, *args):
         self.text = args[0]
 
+def check_int(a):
+    try:
+        return int(a)
+    except:
+        raise Exc_int_type("не число")
 
-def check_int (a):
-    if type(a) == "int" or "float":
-        return (a)
-    else:
-        Exc_int_type("Это не число")
 
-
-num_list = []
+el_list = []
 while True:
     try:
-        x = int(input("введите элемент: "))
-    except:
-
-    try:
-        num_list.append(int(x))
-    except: Exception as err:
-        print("Ошибка: ", err)
-    finally:
+        x = input("enter")
+        el_list.append(check_int(x))
+    except Exception as err:
         if x == "stop":
+            print(el_list)
             break
+        else:
+            print("Ошибка: ", err)

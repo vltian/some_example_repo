@@ -8,7 +8,6 @@ class Exc_DivZero (Exception):
         self. text = args[0]
 
 
-
 def div(a,b):
     if b == 0:
         raise Exc_DivZero("Деление на 0!")
